@@ -1,0 +1,41 @@
+<!-- customer-form.component.html -->
+<form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+    <!-- Customer Name -->
+    <mat-form-field>
+      <input matInput formControlName="customerName" placeholder="Customer Name">
+    </mat-form-field>
+  
+    <!-- City (Select Box) -->
+    <mat-form-field>
+      <mat-label>City</mat-label>
+      <mat-select formControlName="city">
+        <mat-option value="city1">City 1</mat-option>
+        <mat-option value="city2">City 2</mat-option>
+        <!-- Add more cities as needed -->
+      </mat-select>
+    </mat-form-field>
+  
+    <!-- Number of Coworkers -->
+    <mat-form-field>
+      <input matInput formControlName="coworkers" type="number" placeholder="Number of Coworkers">
+    </mat-form-field>
+  
+    <!-- Mobile Number -->
+    <mat-form-field>
+      <input matInput formControlName="mobileNumber" placeholder="Mobile Number">
+    </mat-form-field>
+  
+    <!-- Fax Number -->
+    <mat-form-field>
+      <input matInput formControlName="faxNumber" placeholder="Fax Number">
+    </mat-form-field>
+  
+    <!-- Address (Textarea) -->
+    <mat-form-field>
+      <textarea matInput formControlName="address" placeholder="Address"></textarea>
+    </mat-form-field>
+  
+    <!-- Submit Button -->
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </form>
+  
